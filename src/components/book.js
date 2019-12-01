@@ -9,8 +9,8 @@ const Book = () => (
     `}
   >
     <img
-      src="/static/images/cover-obi.jpg"
-      alt="FACTFULNESS ファクトフルネス"
+      src="/static/images/cover-en.jpg"
+      alt="Factfulness"
       css={css`
         display: inline-block;
         max-width: 180px;

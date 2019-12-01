@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import {jsx, css} from '@emotion/core'
+import { jsx, css } from '@emotion/core'
 import Map from './map'
 import Emoji from './emoji'
-import CircleEmoji from './twemoji/2b55'
+import CheckEmoji from './twemoji/2705'
 import CrossEmoji from './twemoji/274c'
 
 const QuizResultChoice = ({
@@ -33,7 +33,7 @@ const QuizResultChoice = ({
           {selectedAnswer === choice ? (
             selectedAnswer === correctAnswer ? (
               <Emoji>
-                <CircleEmoji />
+                <CheckEmoji />
               </Emoji>
             ) : (
               <Emoji>

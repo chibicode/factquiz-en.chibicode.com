@@ -1,13 +1,13 @@
 /** @jsx jsx */
-import {jsx, css} from '@emotion/core'
-import {problems} from '../lib/quiz'
+import { jsx, css } from '@emotion/core'
+import { problems } from '../lib/quiz'
 import Emoji from './emoji'
-import CircleEmoji from './twemoji/2b55'
+import CheckEmoji from './twemoji/2705'
 import CrossEmoji from './twemoji/274c'
 import ThinkEmoji from './twemoji/1f914'
 import MonkeyEmoji from './twemoji/1f435'
 
-const ResultsBreakdown = ({selectedAnswers}) => (
+const ResultsBreakdown = ({ selectedAnswers }) => (
   <>
     <h3
       css={css`
@@ -20,7 +20,7 @@ const ResultsBreakdown = ({selectedAnswers}) => (
       <Emoji large>
         <ThinkEmoji />
       </Emoji>{' '}
-      質問別の結果はこちら！
+      Results breakdown{' '}
       <Emoji large>
         <MonkeyEmoji />
       </Emoji>
@@ -30,22 +30,22 @@ const ResultsBreakdown = ({selectedAnswers}) => (
         list-style-type: none;
         line-height: 1.6;
         margin: 0 0 1rem;
-        font-size: 0.825rem;
+        font-size: 0.9rem;
         padding: 0;
       `}
     >
-      {problems.map(({short, answer}, index) => (
+      {problems.map(({ short, answer }, index) => (
         <li key={short}>
           {answer === selectedAnswers[index] ? (
             <Emoji>
-              <CircleEmoji />
+              <CheckEmoji />
             </Emoji>
           ) : (
             <Emoji>
               <CrossEmoji />
             </Emoji>
           )}{' '}
-          <strong>質問{index + 1}</strong>: {short}
+          <strong>Q{index + 1}</strong>: {short}
         </li>
       ))}
       <li
@@ -58,7 +58,7 @@ const ResultsBreakdown = ({selectedAnswers}) => (
             color: #777;
           `}
         >
-          (↑スクリーンショットを撮って結果をシェアしてみてください！ちなみに本には「質問13」がありますが、ボーナス問題なので省きました)
+          (↑ Take a screenshot and share the results!)
         </span>
       </li>
     </ol>

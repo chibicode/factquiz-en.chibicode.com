@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import {jsx, css} from '@emotion/core'
-import {problems} from '../lib/quiz'
+import { jsx, css } from '@emotion/core'
+import { problems } from '../lib/quiz'
 import Card from './card'
 import Intro from './intro'
 import Outro from './outro'
@@ -8,18 +8,18 @@ import Map from './map'
 import ChoiceButton from './choice-button'
 import ExternalLink from './external-link'
 
-const quietCss = css`
+export const quietCss = css`
   color: #777;
   font-size: 0.825rem;
 `
 
-const QuizProblems = ({setAnswer, selectedAnswers, submit}) => (
+const QuizProblems = ({ setAnswer, selectedAnswers, submit }) => (
   <>
     <Card>
       <Intro />
     </Card>
     {problems.map(
-      ({text, choices, useGraphic}, index) =>
+      ({ text, choices, useGraphic }, index) =>
         selectedAnswers.length >= index && (
           <Card key={text} isLast={selectedAnswers.length === index}>
             <h3
@@ -34,26 +34,26 @@ const QuizProblems = ({setAnswer, selectedAnswers, submit}) => (
                   color: #777;
                 `}
               >
-                質問{index + 1}:
+                Question {index + 1}:
               </span>{' '}
               {text}
             </h3>
             <>
               <ChoiceButton
                 isSelected={selectedAnswers[index] === 'a'}
-                onClick={setAnswer({index, answer: 'a'})}
+                onClick={setAnswer({ index, answer: 'a' })}
               >
                 {useGraphic ? <Map choice="a" /> : choices.a}
               </ChoiceButton>
               <ChoiceButton
                 isSelected={selectedAnswers[index] === 'b'}
-                onClick={setAnswer({index, answer: 'b'})}
+                onClick={setAnswer({ index, answer: 'b' })}
               >
                 {useGraphic ? <Map choice="b" /> : choices.b}
               </ChoiceButton>
               <ChoiceButton
                 isSelected={selectedAnswers[index] === 'c'}
-                onClick={setAnswer({index, answer: 'c'})}
+                onClick={setAnswer({ index, answer: 'c' })}
               >
                 {useGraphic ? <Map choice="c" /> : choices.c}
               </ChoiceButton>
@@ -61,23 +61,16 @@ const QuizProblems = ({setAnswer, selectedAnswers, submit}) => (
             {index === 0 && (
               <>
                 <p css={quietCss}>
-                  正しいと思う答えを選んでみてください。最後にある「
-                  <strong>何問正解したかチェック！</strong>
-                  」ボタンを押すまで何度でも選び直すことができます。
+                  Choose the answer you think is correct. You can edit your
+                  answers until you click the <strong>Submit Answers</strong>{' '}
+                  button at the end.
                 </p>
                 <p css={quietCss}>
-                  このクイズについて詳しくは
-                  <ExternalLink href="https://github.com/chibicode/factquiz.chibicode.com">
-                    こちら
+                  Learn more about this quiz{' '}
+                  <ExternalLink href="https://github.com/chibicode/factquiz-en.chibicode.com">
+                    here
                   </ExternalLink>
-                  。
-                </p>
-              </>
-            )}
-            {index === 11 && (
-              <>
-                <p css={quietCss}>
-                  『ファクトフルネス』の本にはこの次に13問目がありますが、ほとんどの人が正解するボーナス問題なので省いています。つまり、これが最終問題です！
+                  .
                 </p>
               </>
             )}

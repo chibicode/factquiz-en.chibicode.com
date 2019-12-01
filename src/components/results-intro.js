@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx, css} from '@emotion/core'
+import { jsx, css } from '@emotion/core'
 import HappyMonkeyEmoji from './twemoji/1f435'
 import HandMonkeyEmoji from './twemoji/1f649'
 import MouthMonkeyEmoji from './twemoji/1f64a'
@@ -21,7 +21,7 @@ const quietCss = css`
   margin-bottom: 0.5rem;
 `
 
-const ResultsIntro = ({score}) => {
+const ResultsIntro = ({ score }) => {
   let result
   if (score > 4) {
     result = 'win'
@@ -40,51 +40,51 @@ const ResultsIntro = ({score}) => {
           margin-bottom: 0.25rem;
         `}
       >
-        『<strong>ファクトフルネス</strong>』クイズの結果
+        “<strong>Factfulness</strong>” Quiz Results
       </p>
       <h1
         css={css`
-          margin: 0rem;
+          margin: 0 0 0.5rem;
           text-align: center;
-          font-size: 1.5rem;
-          line-height: 1.2;
+          font-size: 1.4rem;
+          line-height: 1.1;
         `}
       >
-        チンパンジー
+        You’ve{' '}
         {result === 'win' ? (
           <>
-            に
             <span
               css={css`
                 color: ${colors.win};
               `}
             >
-              勝利！
+              beaten
             </span>
           </>
         ) : result === 'tie' ? (
           <>
-            と
             <span
               css={css`
                 color: ${colors.tie};
               `}
             >
-              引き分け！
-            </span>
+              tied
+            </span>{' '}
+            with
           </>
         ) : (
           <>
-            に
             <span
               css={css`
                 color: ${colors.lose};
               `}
             >
-              敗北！
-            </span>
+              lost
+            </span>{' '}
+            to
           </>
-        )}
+        )}{' '}
+        the chimps!
       </h1>
       <div
         css={css`
@@ -125,21 +125,21 @@ const ResultsIntro = ({score}) => {
       <h2
         css={css`
           margin: 0;
-          font-size: 1.5rem;
+          font-size: 1.4rem;
           text-align: center;
         `}
       >
-        12問中「
+        You scored{' '}
         <span
           css={css`
             color: ${colors[result]};
           `}
         >
-          {score}問
-        </span>
-        」正解！
+          {score}
+        </span>{' '}
+        out of 12!
       </h2>
-      <p css={quietCss}>チンパンジーは平均「4問」正解します</p>
+      <p css={quietCss}>Chimps will get 4/12 on average</p>
     </>
   )
 }

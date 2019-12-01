@@ -1,14 +1,12 @@
 /** @jsx jsx */
-import {jsx, css} from '@emotion/core'
-import Emoji from './emoji'
-import SorryEmoji from './twemoji/1f647-1f3fb-200d-2642-fe0f'
+import { jsx, css } from '@emotion/core'
 import ExternalLink from './external-link'
 
 const noOpLink = e => {
   e.preventDefault()
 }
 
-const Share2CA = ({isBottom}) => (
+const Share2CA = ({ isBottom }) => (
   <>
     <h3
       css={css`
@@ -18,55 +16,33 @@ const Share2CA = ({isBottom}) => (
         text-align: center;
       `}
     >
-      <Emoji large>
-        <SorryEmoji />
-      </Emoji>{' '}
-      シェアもお願いします！
-      <Emoji large>
-        <SorryEmoji />
-      </Emoji>
+      Please Share!
     </h3>
+    <p>You can send this quiz to your friends by copying the following link.</p>
     <p
       css={css`
         text-align: center;
-      `}
-    >
-      もし「このクイズ、友達にもやらせたいな」と思っていただけたら、下のリンクをコピーして送ってください！
-    </p>
-    <p
-      css={css`
-        text-align: center;
-        font-size: 1.2rem;
-        letter-spacing: -1px;
         color: #074da2;
         font-weight: bold;
         margin-bottom: 1.5rem;
       `}
     >
-      <a href="https://factquiz.chibicode.com" onClick={noOpLink}>
-        https://factquiz.chibicode.com
+      <a href="https://factquiz-en.chibicode.com" onClick={noOpLink}>
+        https://factquiz-en.chibicode.com
       </a>
     </p>
-    <p
-      css={css`
-        text-align: center;
-      `}
-    >
-      {isBottom ? (
-        <span
-          css={css`
-            color: #777;
-          `}
-        >
-          このクイズについて詳しくは
-          <ExternalLink href="https://github.com/chibicode/factquiz.chibicode.com">
-            こちら
-          </ExternalLink>
-          。
-        </span>
-      ) : (
-        <>以下、質問を再度掲載していきます。</>
-      )}
+    <p>
+      <span
+        css={css`
+          color: #777;
+        `}
+      >
+        You can learn more about this quiz{' '}
+        <ExternalLink href="https://github.com/chibicode/factquiz-en.chibicode.com">
+          here
+        </ExternalLink>
+        .
+      </span>
     </p>
   </>
 )

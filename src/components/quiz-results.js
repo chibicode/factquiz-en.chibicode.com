@@ -1,15 +1,14 @@
 /** @jsx jsx */
-import {jsx, css} from '@emotion/core'
-import {problems, score} from '../lib/quiz'
+import { jsx, css } from '@emotion/core'
+import { problems, score } from '../lib/quiz'
 import Card from './card'
 import ResultsIntro from './results-intro'
 import ResultsBreakdown from './results-breakdown'
 import C2A from './c2a'
 import Share2CA from './share-c2a'
-import JpC2A from './jp-c2a'
 import QuizResultChoice from './quiz-result-choice'
 
-const QuizResults = ({selectedAnswers}) => (
+const QuizResults = ({ selectedAnswers }) => (
   <>
     <Card>
       <ResultsIntro score={score(selectedAnswers)} />
@@ -23,7 +22,7 @@ const QuizResults = ({selectedAnswers}) => (
     <Card>
       <Share2CA />
     </Card>
-    {problems.map(({text, choices, useGraphic, answer}, index) => (
+    {problems.map(({ text, choices, useGraphic, answer }, index) => (
       <Card
         key={text}
         backgroundColor={
@@ -42,7 +41,7 @@ const QuizResults = ({selectedAnswers}) => (
               color: #777;
             `}
           >
-            質問{index + 1}:
+            Question {index + 1}:
           </span>{' '}
           {text}
         </h3>
@@ -78,11 +77,8 @@ const QuizResults = ({selectedAnswers}) => (
     <Card>
       <C2A />
     </Card>
-    <Card>
-      <Share2CA isBottom />
-    </Card>
     <Card isLast>
-      <JpC2A />
+      <Share2CA isBottom />
     </Card>
   </>
 )

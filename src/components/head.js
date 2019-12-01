@@ -1,9 +1,9 @@
 import React from 'react'
 import NextHead from 'next/head'
 
-export const title = '『ファクトフルネス(FACTFULNESS)』チンパンジークイズ'
-export const description = '世界の事実にまつわる12の質問にチャレンジ'
-export const imageUrl = 'https://factquiz.chibicode.com/static/images/og.png'
+export const title = 'Factfulness Quiz'
+export const description = 'Created by Shu Uesugi'
+export const imageUrl = 'https://factquiz-en.chibicode.com/static/images/og.png'
 
 const Head = () => (
   <NextHead>
@@ -36,8 +36,8 @@ const Head = () => (
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <meta property="og:locale" content="ja_JP" />
-    <link rel="canonical" href="https://factquiz.chibicode.com/" />
-    <meta property="og:url" content="https://factquiz.chibicode.com/" />
+    <link rel="canonical" href="https://factquiz-en.chibicode.com/" />
+    <meta property="og:url" content="https://factquiz-en.chibicode.com/" />
     <meta property="og:site_name" content={title} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@chibicode" />
@@ -52,20 +52,7 @@ const Head = () => (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: `{"name":"${title}","@type":"WebSite","url":"https://factquiz.chibicode.com/","image":"${imageUrl}","headline":"${title}","@context":"http://schema.org"}`
-      }}
-    />
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-32987822-21"
-    />
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-32987822-21', { 'anonymize_ip': true });`
+        __html: `{"name":"${title}","@type":"WebSite","url":"https://factquiz-en.chibicode.com/","image":"${imageUrl}","headline":"${title}","@context":"http://schema.org"}`
       }}
     />
   </NextHead>

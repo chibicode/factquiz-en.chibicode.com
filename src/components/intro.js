@@ -1,11 +1,12 @@
 /** @jsx jsx */
-import {jsx, css} from '@emotion/core'
+import { jsx, css } from '@emotion/core'
 import MonkeyEmoji from './twemoji/1f435'
 import ThinkEmoji from './twemoji/1f914'
 import VsEmoji from './twemoji/1f19a'
 import Emoji from './emoji'
 import Book from './book'
 import AmazonLink from './amazon-link'
+import { quietCss } from './quiz-problems'
 
 const Intro = () => (
   <>
@@ -14,12 +15,10 @@ const Intro = () => (
         margin: 0 0 0.5rem;
         text-align: center;
         font-size: 1.75rem;
-        line-height: 1.2;
+        line-height: 1.1;
       `}
     >
-      『ファクトフルネス』
-      <br />
-      チンパンジークイズ
+      Factfulness Quiz
     </h1>
     <p
       css={css`
@@ -28,7 +27,7 @@ const Intro = () => (
         color: #777;
       `}
     >
-      ファクトフルネス共訳者(上杉)作成
+      By Shu Uesugi, a co-translator of “Factfulness” JP edition
     </p>
     <p
       css={css`
@@ -38,18 +37,23 @@ const Intro = () => (
       <Book />
     </p>
     <p>
-      2019年1月に発売された本『
-      <AmazonLink href="https://amzn.to/2CMacFZ">
-        <strong>FACTFULNESS (ファクトフルネス)</strong>
+      “
+      <AmazonLink>
+        <strong>Factfulness:</strong> Ten Reasons We're Wrong About the
+        World--and Why Things Are Better Than You Think
       </AmazonLink>
-      』の冒頭には、世界の事実に関するクイズが載っています。
+      ” is a global bestselling book of 2018, written by Hans Rosling, Ola
+      Rosling, and Anna Rosling Rönnlund.{' '}
+      <a href="https://www.gatesnotes.com/Books/Factfulness">
+        Bill Gates called it
+      </a>{' '}
+      “one of the most educational books I’ve ever read.”
     </p>
-    <p
-      css={css`
-        margin-bottom: 0;
-      `}
-    >
-      どの質問もA・B・Cの3択です。つまり、仮にチンパンジーにこのクイズを出したら、正解率はだいたい「3分の1」になります。
+    <p>
+      In the beginning of this book, there’s a <strong>short quiz</strong> about
+      the current state of the world. Each question has 3 answer choices. So if
+      you give this quiz to chimpanzees, they’ll answer 1/3 of the questions
+      correctly.
     </p>
     <div
       css={css`
@@ -69,9 +73,14 @@ const Intro = () => (
       </Emoji>
     </div>
     <p>
-      クイズは全部で12問。チンパンジーなら、だいたい4問正解します。あなたは
-      <strong>5問以上正解</strong>
-      し、見事チンパンジーに勝てるでしょうか？ぜひチャレンジしてみてください！
+      There are <strong>12 questions</strong> total. Your goal is to beat the
+      chimps by answering <strong>more than 4 questions</strong> correctly.
+      Let’s try it!
+    </p>
+    <p css={quietCss}>
+      This is an unofficial quiz based on free material from{' '}
+      <a href="https://www.gapminder.org/free-material/">GAPMINDER.ORG</a>,
+      CC-BY license.
     </p>
   </>
 )

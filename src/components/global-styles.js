@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx, css, Global} from '@emotion/core'
+import { jsx, css, Global } from '@emotion/core'
 import 'modern-normalize'
 
 const NOT_SMALL = '48em'
@@ -11,9 +11,9 @@ const GlobalStyles = () => (
       css`
         html,
         body {
-          font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
-            'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo,
-            sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+            'Segoe UI Symbol';
         }
 
         h1,
@@ -23,17 +23,17 @@ const GlobalStyles = () => (
         h5,
         h6,
         strong {
-          font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
-            'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo,
-            sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+            'Segoe UI Symbol';
           font-weight: bold;
         }
 
         html {
           font-size: 18px;
           color: #333;
-          line-height: 1.8;
-          background-color: #efe5c8;
+          line-height: 1.6;
+          background-color: #dee3ef;
         }
 
         button {
