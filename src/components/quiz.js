@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import {jsx, css} from '@emotion/core'
-import {createRef, Component} from 'react'
+import { jsx, css } from '@emotion/core'
+import { createRef, Component } from 'react'
 import smoothscroll from 'smoothscroll-polyfill'
 import QuizProblems from './quiz-problems'
 import QuizResults from './quiz-results'
@@ -26,8 +26,8 @@ export default class Quiz extends Component {
     })
   }
 
-  setAnswer = ({index, answer}) => () => {
-    this.setState(({selectedAnswers}) => {
+  setAnswer = ({ index, answer }) => () => {
+    this.setState(({ selectedAnswers }) => {
       const newAnswers = [...selectedAnswers]
       newAnswers[index] = answer
       return {
@@ -68,7 +68,7 @@ export default class Quiz extends Component {
   }
 
   render() {
-    const {submitted, selectedAnswers} = this.state
+    const { submitted, selectedAnswers } = this.state
     return submitted ? (
       <QuizResults selectedAnswers={selectedAnswers} />
     ) : (
@@ -94,10 +94,11 @@ export default class Quiz extends Component {
             `}
           >
             {selectedAnswers.length === 11 ? (
-              <>これが最後！</>
+              <>This is the last question!</>
             ) : (
               <>
-                残り<strong>{11 - selectedAnswers.length}問</strong>
+                <strong>{11 - selectedAnswers.length}</strong> more questions
+                left!
               </>
             )}
           </div>

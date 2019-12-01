@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx, css} from '@emotion/core'
+import { jsx, css } from '@emotion/core'
 import MonkeyEmoji from './twemoji/1f435'
 import ThinkEmoji from './twemoji/1f914'
 import VsEmoji from './twemoji/1f19a'
@@ -34,21 +34,15 @@ export const submitButtonCss = css`
   }
 `
 
-const SubmitButton = ({children, onClick}) => (
+const SubmitButton = ({ children, onClick }) => (
   <button type="button" css={submitButtonCss} onClick={onClick}>
     {children}
   </button>
 )
 
-const Outro = ({submit}) => (
+const Outro = ({ submit }) => (
   <>
-    <p
-      css={css`
-        margin-bottom: 0;
-      `}
-    >
-      全12問、お疲れ様です！果たしてチンパンジーに勝てたでしょうか？チェックしてみましょう。
-    </p>
+    <p>Let’s check if you’ve beaten the chimps!</p>
     <div
       css={css`
         text-align: center;
@@ -67,7 +61,7 @@ const Outro = ({submit}) => (
       </Emoji>
     </div>
     <p>
-      <SubmitButton onClick={submit}>何問正解したかチェック！</SubmitButton>
+      <SubmitButton onClick={submit}>Submit Answers</SubmitButton>
     </p>
   </>
 )

@@ -1,7 +1,8 @@
 export const problems = [
   {
-    text: '現在、低所得国に暮らす女子の何割が、初等教育を修了するでしょう？',
-    short: '低所得国における女子教育',
+    text:
+      'In low income countries across the world, how many girls complete fifth grade?',
+    short: 'Girl’s education',
     choices: {
       a: '20%',
       b: '40%',
@@ -10,79 +11,80 @@ export const problems = [
     answer: 'c'
   },
   {
-    text: '世界で最も多くの人が住んでいるのはどこでしょう？',
-    short: '世界の大半の人の所得',
+    text: 'Where does the majority of the world population live?',
+    short: 'People’s income',
     choices: {
-      a: '低所得国',
-      b: '中所得国',
-      c: '高所得国'
+      a: 'Low income countries',
+      b: 'Middle income countries',
+      c: 'High income countries'
     },
     answer: 'b'
   },
   {
     text:
-      '世界の人口のうち、極度の貧困にある人の割合は、過去20年でどう変わったでしょう？',
-    short: '極度の貧困',
+      'In the last 20 years the proportion of people living in extreme poverty worldwide, has...?',
+    short: 'Extreme poverty',
     choices: {
-      a: '約2倍になった',
-      b: 'あまり変わっていない',
-      c: '半分になった'
+      a: 'Almost doubled',
+      b: 'Remained more or less the same',
+      c: 'Almost halved'
     },
     answer: 'c'
   },
   {
-    text: '世界の平均寿命は現在およそ何歳でしょう？',
-    short: '平均寿命',
+    text: 'What is the life expectancy of the world population?',
+    short: 'Life expectancy',
     choices: {
-      a: '50歳',
-      b: '60歳',
-      c: '70歳'
-    },
-    answer: 'c'
-  },
-  {
-    text:
-      '15歳未満の子供は、現在世界に約20億人います。国連の予測によると、2100年に子供の数は約何人になるでしょう？',
-    short: '未来の子供人口',
-    choices: {
-      a: '40億人',
-      b: '30億人',
-      c: '20億人'
+      a: '50 years',
+      b: '60 years',
+      c: '70 years'
     },
     answer: 'c'
   },
   {
     text:
-      '国連の予測によると、2100年にはいまより人口が40億人増えるとされています。人口が増える最も大きな理由は何でしょう？',
-    short: '人口増加の理由',
+      'There are two billion children in the world today, aged 0 to 15 years old. How many children will there be in the year 2100 according to the United Nations?',
+    short: 'Future child population',
     choices: {
-      a: '子供(15歳未満)が増えるから',
-      b: '大人(15歳から74歳)が増えるから',
-      c: '後期高齢者(75歳以上)が増えるから'
+      a: '4 billion',
+      b: '3 billion',
+      c: '2 billion'
+    },
+    answer: 'c'
+  },
+  {
+    text:
+      'The United Nations predicts that by 2100 the world population will have increased by another 4 billion people. What is the main reason?',
+    short: 'Population growth factors',
+    choices: {
+      a: 'There will be more children (under age 15).',
+      b: 'There will be more adults (15-75)',
+      c: 'There will be more very old people (above age 75).'
     },
     answer: 'b'
   },
   {
-    text: '自然災害で毎年亡くなる人の数は、過去100年でどう変化したでしょう？',
-    short: '自然災害',
+    text:
+      'How did the number of deaths per year from natural disasters change over the last hundred years?',
+    short: 'Natural disasters',
     choices: {
-      a: '2倍以上になった',
-      b: 'あまり変わっていない',
-      c: '半分以下になった'
+      a: 'More than doubled',
+      b: 'Remained more or less the same',
+      c: 'Decreased to less than half'
     },
     answer: 'c'
   },
   {
     text:
-      '現在、世界には約70億人の人がいます。下の地図では、人の印がそれぞれ10億人を表しています。世界の人口分布を正しく表しているのは3つのうちどれでしょう？',
-    short: '人口分布',
+      'There are roughly seven billion people in the world today. Which map shows where people live? (Each figure represents 1 billion people.)',
+    short: 'Population distribution',
     useGraphic: true,
     answer: 'a'
   },
   {
     text:
-      '世界中の1歳児の中で、なんらかの病気に対して予防接種を受けている子供はどのくらいいるでしょう？',
-    short: '子供の予防接種',
+      'How many of the world’s 1-year-old children today have been vaccinated against some disease?',
+    short: 'Vaccines for Babies',
     choices: {
       a: '20%',
       b: '50%',
@@ -92,29 +94,29 @@ export const problems = [
   },
   {
     text:
-      '世界中の30歳男性は、平均10年間の学校教育を受けています。同じ年の女性は何年間学校教育を受けているでしょう？',
-    short: '女性の教育',
+      'Worldwide, 30 year old men have spent 10 years in school, on average. How many years have women of the same age spent in school?',
+    short: 'Women’s education',
     choices: {
-      a: '9年',
-      b: '6年',
-      c: '3年'
+      a: '9 years',
+      b: '6 years',
+      c: '3 years'
     },
     answer: 'a'
   },
   {
     text:
-      '1996年には、トラとジャイアントパンダとクロサイはいずれも絶滅危惧種として指定されていました。この3つのうち、当時よりも絶滅の危機に瀕している動物はいくつでしょう？',
-    short: '絶滅危惧種',
+      'Tigers, Giant Pandas and Black Rhinos were listed as threatened species in 1996. Since then, have any of these species become more critically endangered?',
+    short: 'Endangered species',
     choices: {
-      a: '2つ',
-      b: 'ひとつ',
-      c: 'ゼロ'
+      a: '2 of them',
+      b: '1 of them',
+      c: 'None of them'
     },
     answer: 'c'
   },
   {
-    text: 'いくらかでも電気が使える人は、世界にどのくらいいるでしょう？',
-    short: '電気',
+    text: 'How many people in the world have some access to electricity?',
+    short: 'Electricity',
     choices: {
       a: '20%',
       b: '50%',
