@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import {jsx, css} from '@emotion/core'
-import {ns} from './global-styles'
+import { jsx, css } from '@emotion/core'
+import { ns } from './global-styles'
 
-const Card = ({children, isLast, backgroundColor}) => (
+const Card = ({ children, isLast, backgroundColor }) => (
   <>
     <section
       css={css`
@@ -25,7 +25,7 @@ const Card = ({children, isLast, backgroundColor}) => (
             height: 1.75rem;
           }
           margin: 0 auto;
-          background: #c7bfa7;
+          background: #a6b3d2;
         `}
       />
     )}

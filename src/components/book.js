@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx, css} from '@emotion/core'
+import { jsx, css } from '@emotion/core'
 import AmazonLink from './amazon-link'
 
 const Book = () => (
@@ -14,7 +14,7 @@ const Book = () => (
       css={css`
         display: inline-block;
         max-width: 180px;
-        border: 1px solid #c7bfa7;
+        border: 1px solid #a6b3d2;
       `}
     />
   </AmazonLink>
