@@ -5,7 +5,7 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "next build && next export",
+    "build": "next build",
     "twemoji": "mkdir -p .twemoji && rm -f src/components/twemoji/* && rm -f .twemoji/* && cp `node ./scripts/copy-used-emojis.js` .twemoji && svgr --filename-case kebab --no-dimensions -d src/components/twemoji .twemoji && xo src/components/twemoji --fix"
   },
   "dependencies": {
